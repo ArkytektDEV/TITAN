@@ -1,0 +1,4 @@
+appId: titan.xyz
+publish:
+  provider: github
+  token: 195bf5387d0544ea85bef607a45b6d3b64c964de

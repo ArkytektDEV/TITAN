@@ -1,0 +1,66 @@
+body{
+    background-image: linear-gradient(90deg, #0095ff, #512ffd);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+    outline: none !important;
+} 
+
+.content{
+  min-height: 100vh;
+}
+
+div.frame{
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+  background-image: linear-gradient(to right, #222, #222);
+  color: white;
+  font-weight: 100;
+}
+
+.btn-group button, div.btn-group button.close {
+    -webkit-app-region: no-drag;
+    border: 0px solid transparent; 
+    background-color: transparent;
+    color: white; 
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: right;
+    align-content: right;
+  }
+  
+  .btn-group button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-group button.exit:hover {
+    background-color: #fa4d4d;
+  }
+
+  .sidebar {
+    background-color: #444;
+    min-height: 100vh;
+  }
+
+  #notification {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .hidden {
+    display: none;
+  }
