@@ -3,6 +3,44 @@ let win;
 
 const { autoUpdater } = require('electron-updater');
 
+const DiscordRPC = require('discord-rpc');
+
+const clientId = '715093557748432946';
+
+// only needed for discord allowing spectate, join, ask to join
+DiscordRPC.register(clientId);
+
+const rpc = new DiscordRPC.Client({ transport: 'ipc' });
+const startTimestamp = new Date();
+
+async function setActivity() {
+  if (!rpc) {
+    return;
+  }
+
+  rpc.setActivity({
+    details: 'Titan Bot Maker',
+    state: 'Creating a Bot',
+    startTimestamp,
+    largeImageKey: 'logo',
+    largeImageText: 'TITAN Bot Maker',
+    smallImageKey: 'active',
+    smallImageText: 'Online',
+    instance: false,
+  });
+}
+
+rpc.on('ready', () => {
+  setActivity();
+
+  // activity can only be set every 15 seconds
+  setInterval(() => {
+    setActivity();
+  }, 15e3);
+});
+
+rpc.login({ clientId }).catch(console.error);
+
 function createWindow () {
   win = new BrowserWindow({
     width: 350,

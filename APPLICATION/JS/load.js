@@ -3,7 +3,7 @@ const {remote, ipcRenderer} = require('electron');
 const version = document.getElementById('version');
 const updateMsg = document.getElementById('updateMsg');
 
-window.location.href = '../HTML/index.html';
+//window.location.href = '../HTML/index.html';
 
 function setSize(){
     var window = remote.getCurrentWindow();

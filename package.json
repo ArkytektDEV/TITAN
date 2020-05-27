@@ -5,10 +5,11 @@
   "main": "Client.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
-    "animate.css": "^3.7.2",
+    "animate.css": "^4.1.0",
     "bootstrap": "^4.3.1",
+    "discord-rpc": "^3.1.1",
     "electron-updater": "^4.2.5",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "popper.js": "^1.16.0",
     "socket.io": "^2.3.0"
   },
@@ -29,15 +30,15 @@
     }
   },
   "repository": {
-    "type" : "git",
-    "url" : ""
+    "type": "git",
+    "url": "https://github.com/ArkytektDEV/TITAN.git"
   },
   "devDependencies": {
-    "electron": "^7.1.1",
-    "electron-builder": "^22.4.1"
+    "electron": "^7.3.0",
+    "electron-builder": "^22.6.1"
   },
   "scripts": {
-    "start": "electron .",
+    "start": "electron-builder build --win --publish always",
     "dist": "electron-builder",
     "build": "electron-builder build --win --publish never",
     "deploy": "electron-builder build --win --publish always"
