@@ -34,7 +34,7 @@
     "url": "https://github.com/ArkytektDEV/TITAN.git"
   },
   "devDependencies": {
-    "electron": "^7.3.0",
+    "electron": "^15.5.5",
     "electron-builder": "^22.6.1"
   },
   "scripts": {
